@@ -2,9 +2,18 @@
 /* Template Name: Projects */
 get_header('projects');
 ?>
-<?php if(have_posts()) { while(have_posts()){ the_post(); ?>
-<?php the_content(); ?>
+<main>
+<?php if(have_posts()) { while(have_posts()){ the_post();
+  $projects = get_field('projects');
+?>
+<?php foreach($projects as $str_project) {
+  include('modules/str-slider.php');
+} ?>
+<pre><?php print_r($projects); ?></pre>
+<?php //the_content(); ?>
 <?php
 }}
-
+?>
+</main>
+<?php
 get_footer();

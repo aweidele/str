@@ -1,10 +1,10 @@
 .main_logo {
-  width: 735px;
+  max-width: 735px;
   margin: auto;
 }
 
 .main_nav {
-  width: 735px;
+  max-width: 735px;
   margin: auto;
   font-family: 'PT Sans Narrow', Helvetica, Arial, Lucida, sans-serif;
   font-weight: bold;
@@ -20,4 +20,9 @@
   a {
     padding: 24px 11px;
   }
+}
+
+.str_project {
+  max-width: 1200px;
+  margin: auto;
 }

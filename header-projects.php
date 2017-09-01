@@ -201,7 +201,7 @@
 		</div>
 	<?php endif; // true ==== $et_slide_header ?>
 
-		<header id="main-header" data-height-onload="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>">
+		<header id="projects-header" data-height-onload="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>">
 			<div class="main_logo">
 				<a href=""><img src="http://str-architecture.com/wp-content/uploads/2017/04/STR-logo-dot.png"></a>
 			</div>
