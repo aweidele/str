@@ -84,3 +84,38 @@
 .str_previous {
   left: -50px;
 }
+
+.str_project_indicators {
+  text-align: center;
+}
+
+.str_indicator {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  text-indent: -200%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: table;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #707070;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background 0.5s;
+  }
+
+  &:hover:after {
+      background: darken(#c61515,30);
+  }
+
+  &.active:after {
+      background: #c61515;
+  }
+}

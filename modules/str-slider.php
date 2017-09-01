@@ -59,4 +59,9 @@
       <div class="str_previous">Prev</div>
       <div class="str_next">Next</div>
     </div>
+    <div class="str_project_indicators">
+<?php for($i=0;$i<sizeof($slides);$i++) { ?>
+      <div class="str_indicator<?php echo !$i ? ' active' : ''; ?>"><?php echo $i; ?></div>
+<?php } ?>
+    </div>
   </section>
