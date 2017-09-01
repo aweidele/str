@@ -46,6 +46,7 @@
       <?php echo wpautop($project_description); ?>
     </div>
     <div class="str_project_controls">
-
+      <div class="str_previous">Prev</div>
+      <div class="str_next">Next</div>
     </div>
   </section>

@@ -30,9 +30,10 @@
 .str_project {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
-/* line 30, ../sass/projects.scss */
+/* line 31, ../sass/projects.scss */
 .str_project_slider_container {
   position: relative;
   width: 100%;
@@ -40,7 +41,7 @@
   overflow: hidden;
 }
 
-/* line 37, ../sass/projects.scss */
+/* line 38, ../sass/projects.scss */
 .str_project_slider {
   width: 100%;
   height: 100%;
@@ -49,7 +50,7 @@
   left: 0;
 }
 
-/* line 45, ../sass/projects.scss */
+/* line 46, ../sass/projects.scss */
 .str_slide {
   width: 100%;
   height: 100%;
@@ -59,21 +60,41 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-/* line 54, ../sass/projects.scss */
+/* line 55, ../sass/projects.scss */
 .str_slide.active {
   opacity: 1;
 }
 
-/* line 59, ../sass/projects.scss */
+/* line 60, ../sass/projects.scss */
 .str_slide_image {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 64, ../sass/projects.scss */
+/* line 65, ../sass/projects.scss */
 .str_slide_image img {
   height: 100%;
   width: auto;
   display: block;
   margin: auto;
+}
+
+/* line 73, ../sass/projects.scss */
+.str_next,
+.str_previous {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  cursor: pointer;
+}
+
+/* line 81, ../sass/projects.scss */
+.str_next {
+  right: -50px;
+}
+
+/* line 84, ../sass/projects.scss */
+.str_previous {
+  left: -50px;
 }

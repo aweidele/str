@@ -25,6 +25,7 @@
 .str_project {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 .str_project_slider_container {
@@ -67,4 +68,19 @@
     display: block;
     margin: auto;
   }
+}
+
+.str_next,
+.str_previous {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  cursor: pointer;
+}
+.str_next {
+  right: -50px;
+}
+.str_previous {
+  left: -50px;
 }
