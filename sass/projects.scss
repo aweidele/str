@@ -26,3 +26,45 @@
   max-width: 1200px;
   margin: auto;
 }
+
+.str_project_slider_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 54%;
+  overflow: hidden;
+}
+
+.str_project_slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.str_slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.str_slide_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+}

@@ -37,4 +37,5 @@ function create_sider_post_type() {
 
   register_post_type( 'str-slider' , $args );
 
+  add_image_size('STR Slider',999999,650);
 }

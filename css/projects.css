@@ -31,3 +31,49 @@
   max-width: 1200px;
   margin: auto;
 }
+
+/* line 30, ../sass/projects.scss */
+.str_project_slider_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 54%;
+  overflow: hidden;
+}
+
+/* line 37, ../sass/projects.scss */
+.str_project_slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 45, ../sass/projects.scss */
+.str_slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+/* line 54, ../sass/projects.scss */
+.str_slide.active {
+  opacity: 1;
+}
+
+/* line 59, ../sass/projects.scss */
+.str_slide_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 64, ../sass/projects.scss */
+.str_slide_image img {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: auto;
+}
