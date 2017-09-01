@@ -30,6 +30,14 @@ function orbisius_ctc_divi_child_theme_enqueue_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
+
+
+
+    wp_enqueue_style( $parent_style . '_child_style_projects',
+        get_stylesheet_directory_uri() . '/css/projects.css',
+        array( $parent_style ),
+        wp_get_theme()->get('Version')
+    );
 }
 
 add_action( 'wp_enqueue_scripts', 'orbisius_ctc_divi_child_theme_enqueue_styles' );

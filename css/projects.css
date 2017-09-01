@@ -1,0 +1,27 @@
+/* line 1, ../sass/projects.scss */
+.main_logo {
+  width: 735px;
+  margin: auto;
+}
+
+/* line 6, ../sass/projects.scss */
+.main_nav {
+  width: 735px;
+  margin: auto;
+  font-family: 'PT Sans Narrow', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000 !important;
+  letter-spacing: 2px;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+/* line 18, ../sass/projects.scss */
+.menu-item {
+  display: inline-block;
+}
+/* line 20, ../sass/projects.scss */
+.menu-item a {
+  padding: 24px 11px;
+}
