@@ -9,7 +9,6 @@ get_header('projects');
 <?php foreach($projects as $str_project) {
   include('modules/str-slider.php');
 } ?>
-<pre><?php print_r($projects); ?></pre>
 <?php //the_content(); ?>
 <?php
 }}

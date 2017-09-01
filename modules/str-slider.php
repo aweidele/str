@@ -2,6 +2,8 @@
   $project_slides = get_field('project_slides',$str_project->ID);
   $project_text_slides = get_field('project_text_slides',$str_project->ID);
   $project_description = get_field('project_description',$str_project->ID);
+  $jumpslide = -1;
+  $jumpset = false;
 
   $slides = array();
   foreach ($project_slides as $i => $slide) {
@@ -10,11 +12,18 @@
   }
   foreach($project_text_slides as $slide) {
     $slide['type'] = 'text';
-    if($slide['slide_position'] != '') {
-      $pos = (($slide['slide_position'] - 1) * 10) + 5;
-      $slides[$pos] = $slide;
-    } else {
-      $slides[] = $slide;
+    if($slide['text'] != '') {
+      if($slide['slide_position'] != '') {
+        $pos = (($slide['slide_position'] - 1) * 10) + 5;
+        $slides[$pos] = $slide;
+      } else {
+        $slides[] = $slide;
+      }
+    }
+
+    if($slide['project_info_slide'] && !$jumpset) {
+      $jumpslide = $pos;
+      $jumpset = true;
     }
   }
   ksort($slides);
@@ -24,8 +33,8 @@
       <div class="str_project_slider">
 <?php
   $i = 0;
-  foreach($slides as $slide) { ?>
-        <div class="str_slide<?php echo !$i ? ' active' : ''; ?>">
+  foreach($slides as $j => $slide) { ?>
+        <div class="str_slide<?php echo !$i ? ' active' : ''; ?><?php echo $j == $jumpslide ? ' project_info' : ''; ?>">
           <?php if($slide[type] == 'image') { ?>
             <div class="str_slide_image">
               <img src="<?php echo $slide['sizes']['STR Slider']; ?>">
@@ -44,6 +53,7 @@
     <div class="str_project_description">
       <h3><?php echo $str_project->post_title; ?></h3>
       <?php echo wpautop($project_description); ?>
+      <p class="str_slider_info_link">Project Info</p>
     </div>
     <div class="str_project_controls">
       <div class="str_previous">Prev</div>
