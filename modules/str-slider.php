@@ -1,6 +1,7 @@
 <?php
   $project_slides = get_field('project_slides',$str_project->ID);
   $project_text_slides = get_field('project_text_slides',$str_project->ID);
+  $project_description = get_field('project_description',$str_project->ID);
 
   $slides = array();
   foreach ($project_slides as $i => $slide) {
@@ -40,5 +41,11 @@
 } ?>
       </div>
     </div>
-<pre><?php print_r($slides); ?></pre>
+    <div class="str_project_description">
+      <h3><?php echo $str_project->post_title; ?></h3>
+      <?php echo wpautop($project_description); ?>
+    </div>
+    <div class="str_project_controls">
+
+    </div>
   </section>
