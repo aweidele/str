@@ -49,4 +49,5 @@ function orbisius_ctc_divi_child_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'orbisius_ctc_divi_child_theme_enqueue_styles' );
 
+include('includes/custom-fields.php');
 include('includes/sliders.php');
